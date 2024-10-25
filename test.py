@@ -6,6 +6,9 @@ import pandas as pd
 
 bot = telebot.TeleBot('5448636353:AAHOQzJrin4uvYmhKSFUwUIFd73YDtmEV6E')
 
+today = [botdata.month(), botdata.day()]
+print (today)
+
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
@@ -27,22 +30,6 @@ def handle_docs(message):
             bot.reply_to(message, "Пожалуйста, загрузите файл Excel.")
     except Exception as e:
         bot.reply_to(message, f"Произошла ошибка: {e}")
-
-# @bot.message_handler(commands=['all'])
-# def all(message):
-#     try:
-#         text = ''
-#         with open('allmem.txt', 'r') as f:
-#             while True:
-#                 line = f.readline()
-#                 if not line:
-#                     break
-#                 tag = line.split("\n")[0]
-#                 text += f'{tag}, '
-#             #print(message)
-#         bot.send_message(message.chat.id, f'{text[:-2]}')
-#     except Exception as e:
-#         bot.reply_to(message, f"Произошла ошибка: {e}")
 
 print ('В работе')
 bot.infinity_polling()
