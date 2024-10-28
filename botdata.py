@@ -15,8 +15,8 @@ class FirstLine:
     def __init__(self, name, title):
         self.name = name
         self.title = title
-        self.tag = None
-        self.active = None
+        self.tag = ''
+        self.active = []
 
     def add_tag(self, tag):
         self.tag = tag
@@ -31,6 +31,7 @@ employ_list = []
 
 # ща тут будет функция обработки данных из таблицы
 def add_file(path):
+
     df = pd.read_excel(path, sheet_name='Сотрудники')
     rows_as_list = df.values.tolist()
     for row in rows_as_list:

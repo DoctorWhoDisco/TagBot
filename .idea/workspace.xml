@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eec2e9f4-219d-4204-9c88-7cf34e4968b5" name="Changes" comment="Наконец настроил создание словаря со словарями, но походу идея неоч и придется вернуть классы">
-      <change beforePath="$PROJECT_DIR$/allmem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/allmem.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/botdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/botdata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-    </list>
+    <list default="true" id="eec2e9f4-219d-4204-9c88-7cf34e4968b5" name="Changes" comment="Прописала класс, но у идешки походу какая-то шиза, говорит что его нет, хотя он есть. Надо разобраться, но не сегодня" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -98,12 +94,21 @@
       <option name="project" value="LOCAL" />
       <updated>1729850060576</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Прописала класс, но у идешки походу какая-то шиза, говорит что его нет, хотя он есть. Надо разобраться, но не сегодня">
+      <option name="closed" value="true" />
+      <created>1729872219919</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1729872219919</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Много всякого добавил" />
     <MESSAGE value="Наконец настроил создание словаря со словарями, но походу идея неоч и придется вернуть классы" />
-    <option name="LAST_COMMIT_MESSAGE" value="Наконец настроил создание словаря со словарями, но походу идея неоч и придется вернуть классы" />
+    <MESSAGE value="Прописала класс, но у идешки походу какая-то шиза, говорит что его нет, хотя он есть. Надо разобраться, но не сегодня" />
+    <option name="LAST_COMMIT_MESSAGE" value="Прописала класс, но у идешки походу какая-то шиза, говорит что его нет, хотя он есть. Надо разобраться, но не сегодня" />
   </component>
 </project>
