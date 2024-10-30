@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eec2e9f4-219d-4204-9c88-7cf34e4968b5" name="Changes" comment="Прописала класс, но у идешки походу какая-то шиза, говорит что его нет, хотя он есть. Надо разобраться, но не сегодня">
-      <change afterPath="$PROJECT_DIR$/cache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/py.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/botdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/botdata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/График смен 1L 2024.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/uploads/График смен 1L 2024.xlsx" afterDir="false" />
-    </list>
+    <list default="true" id="eec2e9f4-219d-4204-9c88-7cf34e4968b5" name="Changes" comment="Настроила кэш и работу со временем" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,13 +110,22 @@
       <option name="project" value="LOCAL" />
       <updated>1729872219919</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Настроила кэш и работу со временем">
+      <option name="closed" value="true" />
+      <created>1730306622744</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1730306622744</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Много всякого добавил" />
     <MESSAGE value="Наконец настроил создание словаря со словарями, но походу идея неоч и придется вернуть классы" />
     <MESSAGE value="Прописала класс, но у идешки походу какая-то шиза, говорит что его нет, хотя он есть. Надо разобраться, но не сегодня" />
-    <option name="LAST_COMMIT_MESSAGE" value="Прописала класс, но у идешки походу какая-то шиза, говорит что его нет, хотя он есть. Надо разобраться, но не сегодня" />
+    <MESSAGE value="Настроила кэш и работу со временем" />
+    <option name="LAST_COMMIT_MESSAGE" value="Настроила кэш и работу со временем" />
   </component>
 </project>
