@@ -20,6 +20,8 @@ def handle_docs(message):
         file_info = bot.get_file(message.document.file_id)
         downloaded_file = bot.download_file(file_info.file_path)
         file_path = os.path.join(UPLOAD_DIR, message.document.file_name)
+        with open('cache.txt', 'w') as file:
+            file.write(file_path)
         with open(file_path, 'wb') as new_file:
             new_file.write(downloaded_file)
         # Проверяем, является ли файл Excel

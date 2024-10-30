@@ -1,8 +1,9 @@
 from datetime import datetime
 import math
-# import openpyxl
 import pandas as pd
-# from gi.overrides.keysyms import value
+import apscheduler
+from apscheduler.schedulers.background import BackgroundScheduler
+import time
 
 months = {"01": "Январь", "02": "Февраль", "03": "Март", "04": "Апрель", "05": "Май", "06": "Июнь",
           "07": "Июль", "08": "Август", "09": "Сентябрь", "10": "Октябрь", "11": "Ноябрь", "12": "Декабрь"}
@@ -63,7 +64,18 @@ def add_file(path):
                 emp.active = active_dict
     print(employ_list)
 
+def __time_happening__():
 
+    print ('day_update')
+
+def morning():
+    print ('morning update')
+
+def evening():
+    print ('evening update')
+
+def night():
+    print('night update')
 # Функция для проверки значения на NaN
 def is_not_nan(value):
     return not (isinstance(value, float) and math.isnan(value))
