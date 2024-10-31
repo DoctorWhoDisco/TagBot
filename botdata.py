@@ -16,9 +16,13 @@ class FirstLine:
         self.title = title
         self.tag = tag
         self.active = {}
+        self.status = ''
 
     def add_active(self, active):
         self.active = active
+
+    def add_active(self, status):
+        self.status = status
 
     def __repr__(self):
         return (f"\nFirstLine\nИмя: {self.name}, \nДолжность: {self.title}, "
