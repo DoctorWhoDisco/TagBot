@@ -31,6 +31,12 @@ class FirstLine:
 
 employ_list = []
 
+def start():
+    with open('cache.txt', 'r') as file:
+        path = ''
+        file.readline(path)
+
+
 # ща тут будет функция обработки данных из таблицы
 def add_file(path):
 
