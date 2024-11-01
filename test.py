@@ -1,13 +1,15 @@
 import os
 import botdata
 import telebot
-import openpyxl
-import pandas as pd
+# import openpyxl
+# import pandas as pd
 
 bot = telebot.TeleBot('5448636353:AAHOQzJrin4uvYmhKSFUwUIFd73YDtmEV6E')
 
 today = [botdata.month(), botdata.day()]
 print (today)
+botdata.start()
+print ('Данные из кэша получены')
 
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)

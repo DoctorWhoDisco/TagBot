@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eec2e9f4-219d-4204-9c88-7cf34e4968b5" name="Changes" comment="Настроила кэш и работу со временем" />
+    <list default="true" id="eec2e9f4-219d-4204-9c88-7cf34e4968b5" name="Changes" comment="Настроила кэш и работу со временем">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/botdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -134,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1730395967205</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Настроила кэш и работу со временем">
+      <option name="closed" value="true" />
+      <created>1730457227169</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1730457227169</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
