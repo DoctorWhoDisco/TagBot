@@ -40,6 +40,9 @@ def start():
     with open('cache.txt', 'r') as file:
         path = file.readline().strip()
     add_file(path)
+    group_update()
+
+def group_update():
     if datetime.strptime("09:00", "%H:%M").time() < datetime.now().time() < datetime.strptime(
             "17:59", "%H:%M").time():
         morning()
@@ -61,13 +64,14 @@ def add_file(path):
     df = pd.read_excel(path, sheet_name='Сотрудники')
     rows_as_list = df.values.tolist()
     for row in rows_as_list:
-        name = row[0]
-        title = row[2]
-        if is_not_nan(row[1]):
-            tag = row[1]
-        else: tag = 'Уволенный сотрудник'
-        obj = FirstLine(name, title, tag)
-        employ_list.append(obj)
+        if not any (emp.name == row[0] for emp in employ_list):
+            name = row[0]
+            title = row[2]
+            if is_not_nan(row[1]):
+                tag = row[1]
+            else: tag = 'Уволенный сотрудник'
+            obj = FirstLine(name, title, tag)
+            employ_list.append(obj)
     df = pd.read_excel(path, sheet_name=month())
     # Формируем лист активных дней (Ура! мы научились читать то что надо)
     rows_as_list = df.values.tolist()[2:]
@@ -87,7 +91,7 @@ def add_file(path):
         for emp in employ_list:
             if emp.name == row[0]:
                 emp.active = active_dict
-
+    group_update()
     print(f'{employ_list} \nData loaded')
 
 # Функция для обновления данных по времени

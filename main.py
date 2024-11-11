@@ -5,8 +5,8 @@ import telebot
 bot = telebot.TeleBot('5448636353:AAHOQzJrin4uvYmhKSFUwUIFd73YDtmEV6E')
 
 today = [botdata.month(), botdata.day()]
-print (today)
 botdata.start()
+print (today)
 print ('Данные из кэша получены')
 print ('В работе')
 
@@ -29,6 +29,7 @@ def handle_docs(message):
         if message.document.mime_type in ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
                                           'application/vnd.ms-excel']:
             botdata.add_file(file_path)
+            bot.reply_to(message, "Ш Б \nмнк\n")
         else:
             bot.reply_to(message, "Пожалуйста, загрузите файл Excel.")
     except Exception as e:

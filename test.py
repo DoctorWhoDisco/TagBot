@@ -14,31 +14,31 @@ print ('Данные из кэша получены')
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
-@bot.message_handler(commands=['вообще_все', 'general', 'путукфд'])
-def all(message):
-    try:
-        text = ''
-        for emp in botdata.employ_list:
-            if emp.tag != 'Уволенный сотрудник':
-                text += f'{emp.tag}, '
-        print (f'{text[:-2]}')
-        bot.send_message(message.chat.id, f'{text[:-2]}')
-    except Exception as e:
-        bot.reply_to(message, f"Произошла ошибка: {e}")
+# @bot.message_handler(commands=['вообще_все', 'general', 'путукфд'])
+# def all(message):
+#     try:
+#         text = ''
+#         for emp in botdata.employ_list:
+#             if emp.tag != 'Уволенный сотрудник':
+#                 text += f'{emp.tag}, '
+#         print (f'{text[:-2]}')
+#         bot.send_message(message.chat.id, f'{text[:-2]}')
+#     except Exception as e:
+#         bot.reply_to(message, f"Произошла ошибка: {e}")
 
-@bot.message_handler(commands=['на_смене', 'онлайн', 'on_shift', 'online', 'all', 'фдд'])
-def online(message):
-    try:
-        text = ''
-        for on_name in botdata.on_line:
-            for emp in botdata.employ_list:
-                if on_name == emp.name:
-                    text += f'{emp.tag}, '
-                    break
-        print (f'{text[:-2]}')
-        bot.send_message(message.chat.id, f'{text[:-2]}')
-    except Exception as e:
-        bot.reply_to(message, f"Произошла ошибка: {e}")
+# @bot.message_handler(commands=['на_смене', 'онлайн', 'on_shift', 'online', 'all', 'фдд'])
+# def online(message):
+#     try:
+#         text = ''
+#         for on_name in botdata.on_line:
+#             for emp in botdata.employ_list:
+#                 if on_name == emp.name:
+#                     text += f'{emp.tag}, '
+#                     break
+#         print (f'{text[:-2]}')
+#         bot.send_message(message.chat.id, f'{text[:-2]}')
+#     except Exception as e:
+#         bot.reply_to(message, f"Произошла ошибка: {e}")
 
 # @bot.message_handler(content_types=['document'])
 # def handle_docs(message):
