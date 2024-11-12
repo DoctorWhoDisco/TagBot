@@ -1,7 +1,6 @@
 from datetime import datetime
 import math
 from functools import partial
-
 import pandas as pd
 import apscheduler
 from apscheduler.schedulers.background import BackgroundScheduler
@@ -56,7 +55,6 @@ def group_update():
             "8:59", "%H:%M").time():
         night(1)
     time_happening()
-
 
 # Функция обработки данных из таблицы
 def add_file(path):
