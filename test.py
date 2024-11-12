@@ -1,7 +1,7 @@
 import os
-import botdata
+from utils import botdata
 import telebot
-from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
+
 # import openpyxl
 # import pandas as pd
 
@@ -14,6 +14,16 @@ print ('Данные из кэша получены')
 
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+# Команда на справку (пользовательская)
+@bot.message_handler(commands=['help', 'помощь'])
+def newhelp(message):
+    try:
+        text = (f'Справка: \n/all - тег сотрудников находящихся на смене в данный момент\n/general - тег всех '
+                f'сотрудников 1 линии\n\n')
+        bot.reply_to(message, f'{text}')
+    except Exception as e:
+             bot.reply_to(message, f"Произошла ошибка: {e}")
 
 # # Команда на справку (пользовательская)
 # @bot.message_handler(commands=['help', 'помощь'])

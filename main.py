@@ -1,16 +1,11 @@
 import os
-import botdata
+from utils import add_file, employ_list, on_line, group_update, start
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 bot = telebot.TeleBot('5448636353:AAHOQzJrin4uvYmhKSFUwUIFd73YDtmEV6E')
 
-today = [botdata.month(), botdata.day()]
-botdata.start()
-print (today)
-print ('Данные из кэша получены')
-print ('В работе')
-
+start()
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
@@ -30,7 +25,8 @@ def handle_docs(message):
         # Проверяем, является ли файл Excel
         if message.document.mime_type in ['application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
                                           'application/vnd.ms-excel']:
-            botdata.add_file(file_path)
+            add_file(file_path)
+            group_update()
             bot.reply_to(message, "Ш Б \nмнк\n")
         else:
             bot.reply_to(message, "Пожалуйста, загрузите файл Excel.")
@@ -39,10 +35,10 @@ def handle_docs(message):
 
 # Команда на тег вообще на всех
 @bot.message_handler(commands=['вообще_все', 'general', 'путукфд'])
-def all(message):
+def newall(message):
     try:
         text = ''
-        for emp in botdata.employ_list:
+        for emp in employ_list:
             if emp.tag != 'Уволенный сотрудник':
                 text += f'{emp.tag}, '
         print (f'{text[:-2]}')
@@ -55,8 +51,8 @@ def all(message):
 def online(message):
     try:
         text = ''
-        for on_name in botdata.on_line:
-            for emp in botdata.employ_list:
+        for on_name in on_line:
+            for emp in employ_list:
                 if on_name == emp.name:
                     text += f'{emp.tag}, '
                     break
@@ -67,7 +63,7 @@ def online(message):
 
 # Команда на справку (пользовательская)
 @bot.message_handler(commands=['help', 'помощь'])
-def help(message):
+def newhelp(message):
     try:
         text = (f'Справка: \n/all - тег сотрудников находящихся на смене в данный момент\n/general - тег всех '
                 f'сотрудников 1 линии\n\n')

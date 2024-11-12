@@ -4,10 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eec2e9f4-219d-4204-9c88-7cf34e4968b5" name="Changes" comment="Настроила кэш и работу со временем">
+    <list default="true" id="eec2e9f4-219d-4204-9c88-7cf34e4968b5" name="Changes" comment="Добавила пользовательскую справку и админ панель в main. Теперь по идее можно пересобирать контейнер.">
+      <change afterPath="$PROJECT_DIR$/utils/classcreate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/classupdate.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/start.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/allmem.txt" beforeDir="false" afterPath="$PROJECT_DIR$/utils/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/botdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/botdata.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ГисРко черновик.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/ГисРко.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploads/первые пункты дисп. службы..docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +57,8 @@
   &quot;keyToString&quot;: {
     &quot;Python.Unnamed.executor&quot;: &quot;Run&quot;,
     &quot;Python.botdata.executor&quot;: &quot;Run&quot;,
+    &quot;Python.classcreate.executor&quot;: &quot;Run&quot;,
+    &quot;Python.classupdate.executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;Python.py.executor&quot;: &quot;Run&quot;,
     &quot;Python.test.executor&quot;: &quot;Run&quot;,
@@ -59,6 +69,11 @@
     &quot;last_opened_file_path&quot;: &quot;/home/asus_deb/PycharmProjects/TagBot&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/utils" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -171,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1731333626016</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Добавила пользовательскую справку и админ панель в main. Теперь по идее можно пересобирать контейнер.">
+      <option name="closed" value="true" />
+      <created>1731402233663</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1731402233663</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -193,6 +216,7 @@
     <MESSAGE value="Наконец настроил создание словаря со словарями, но походу идея неоч и придется вернуть классы" />
     <MESSAGE value="Прописала класс, но у идешки походу какая-то шиза, говорит что его нет, хотя он есть. Надо разобраться, но не сегодня" />
     <MESSAGE value="Настроила кэш и работу со временем" />
-    <option name="LAST_COMMIT_MESSAGE" value="Настроила кэш и работу со временем" />
+    <MESSAGE value="Добавила пользовательскую справку и админ панель в main. Теперь по идее можно пересобирать контейнер." />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавила пользовательскую справку и админ панель в main. Теперь по идее можно пересобирать контейнер." />
   </component>
 </project>
