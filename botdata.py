@@ -41,6 +41,7 @@ def start():
     add_file(path)
     group_update()
 
+# Апдейт классов
 def group_update():
     if datetime.strptime("09:00", "%H:%M").time() < datetime.now().time() < datetime.strptime(
             "17:59", "%H:%M").time():

@@ -1,6 +1,7 @@
 import os
 import botdata
 import telebot
+from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 bot = telebot.TeleBot('5448636353:AAHOQzJrin4uvYmhKSFUwUIFd73YDtmEV6E')
 
@@ -13,6 +14,7 @@ print ('В работе')
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 
+# Внесение нового файла
 @bot.message_handler(content_types=['document'])
 def handle_docs(message):
     try:
@@ -35,6 +37,7 @@ def handle_docs(message):
     except Exception as e:
         bot.reply_to(message, f"Произошла ошибка: {e}")
 
+# Команда на тег вообще на всех
 @bot.message_handler(commands=['вообще_все', 'general', 'путукфд'])
 def all(message):
     try:
@@ -47,6 +50,7 @@ def all(message):
     except Exception as e:
         bot.reply_to(message, f"Произошла ошибка: {e}")
 
+# Команда на тег тех кто на смене
 @bot.message_handler(commands=['на_смене', 'онлайн', 'on_shift', 'online', 'all', 'фдд'])
 def online(message):
     try:
@@ -60,6 +64,50 @@ def online(message):
         bot.send_message(message.chat.id, f'{text[:-2]}')
     except Exception as e:
         bot.reply_to(message, f"Произошла ошибка: {e}")
+
+# Команда на справку (пользовательская)
+@bot.message_handler(commands=['help', 'помощь'])
+def help(message):
+    try:
+        text = (f'Справка: \n/all - тег сотрудников находящихся на смене в данный момент\n/general - тег всех '
+                f'сотрудников 1 линии\n\n')
+        bot.reply_to(message, f'{text}')
+    except Exception as e:
+             bot.reply_to(message, f"Произошла ошибка: {e}")
+
+# Открытие админ панели
+@bot.message_handler(content_types=["text"])
+def handle_text_message(message):
+    try:
+        if "админ панель: ff234" in message.text.lower():
+            text = (f'Справка: \n/all - тег сотрудников находящихся на смене в данный момент\n/general - тег всех '
+                    f'сотрудников 1 линии\n\n'
+                    f'Если необходимо внести обновленное расписание сотрудников просьба приложить файл в excel.\n'
+                    f'Более точное описание нюансов заполнения данного файла '
+                    f'(в т.ч. пример документа) по кнопке ниже.')
+            markup = InlineKeyboardMarkup()
+            tablebutton = InlineKeyboardButton("Подробнее о таблице", callback_data="tablebutton_pressed")
+            markup.add(tablebutton)
+            bot.reply_to(message, f'{text}', reply_markup=markup)
+    except Exception as e:
+        bot.reply_to(message, f"Произошла ошибка: {e}")
+
+# Обработчик кнопки для доп инфы по таблице
+@bot.callback_query_handler(func=lambda call: call.data == "tablebutton_pressed")
+def handle_button_press(call):
+    try:
+        text = (f'Для корректного считывания данных ботом необходимо:\n'
+                f'1. Таблица с расписанием месяцев должна быть разделена с последующей пустой строкой.\n'
+                f'2. Файл обязательно должен содержать в себе лист "Сотрудники" с данными всех актуальных сотрудников.\n'
+                f'(сотрудники отсутствующие в данном листе не будут учитываться)\n'
+                f'3. Не забывайте, что тадлица обязательно должна содержать столбец для последнего дня предыдущего '
+                f'месяца. Он считается частью разметки страницы.\n')
+        # Отправка файла пользователю
+        file_path = os.path.join(os.getcwd(), 'uploads/correct_file.xlsx')
+        with open(file_path, 'rb') as file:
+            bot.send_document(call.message.chat.id, file, caption=text)
+    except Exception as e:
+        bot.reply_to(call.message, f"Произошла ошибка: {e}")
 
 bot.infinity_polling()
 
