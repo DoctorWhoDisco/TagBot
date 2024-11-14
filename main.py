@@ -3,7 +3,7 @@ from utils import add_file, employ_list, on_line, group_update, start
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-bot = telebot.TeleBot('5448636353:AAHOQzJrin4uvYmhKSFUwUIFd73YDtmEV6E')
+bot = telebot.TeleBot('6261116025:AAFmRm6NX0BFCdulSncXzjq0jbY3RS-zqbc')
 
 start()
 UPLOAD_DIR = "uploads"
