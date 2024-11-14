@@ -5,6 +5,8 @@ from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 bot = telebot.TeleBot('6261116025:AAFmRm6NX0BFCdulSncXzjq0jbY3RS-zqbc')
 
+bot.remove_webhook()
+
 start()
 UPLOAD_DIR = "uploads"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
